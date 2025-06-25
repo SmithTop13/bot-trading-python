@@ -97,17 +97,26 @@ The initial phase focused on building the foundational framework:
     ```
 
 3.  **Install dependencies:**
-    Currently, the main external dependency is `requests`. A `requirements.txt` will be added in future phases.
+    Install dependencies from `requirements.txt`:
     ```bash
-    pip install requests
+    pip install -r requirements.txt
     ```
 
 4.  **Environment Variables:**
-    For functionalities requiring authentication with the Gemini API (like fetching account balances), you need to set the following environment variables:
-    *   `GEMINI_API_KEY`: Your Gemini API key.
-    *   `GEMINI_API_SECRET`: Your Gemini API secret.
+    The application requires the following environment variables to be set:
 
-    It is highly recommended to use API keys from a **Gemini Sandbox account** for development and testing.
+    *   `GEMINI_API_KEY`: Your API key for the Gemini Exchange.
+        *   **Obtaining**: Log in to your Gemini account (or Sandbox account). Navigate to API settings to create a new key. Ensure it has necessary permissions (e.g., trading, fund management if applicable later).
+        *   **Recommendation**: For development and testing, **always use API keys from a Gemini Sandbox account** (`https://exchange.sandbox.gemini.com/`).
+    *   `GEMINI_API_SECRET`: Your API secret for the Gemini Exchange.
+        *   **Obtaining**: Provided when you create an API key on Gemini. Store this securely.
+        *   **Recommendation**: Use a Sandbox secret for development.
+    *   `NEWS_API_KEY`: Your API key for the chosen news data provider (e.g., NewsAPI.org).
+        *   **Obtaining**: Register on the news provider's website (e.g., `https://newsapi.org/register`). Free tiers are often available for development.
+    *   `GOOGLE_GENAI_API_KEY`: Your API key for Google AI Studio (for Gemini generative models).
+        *   **Obtaining**: Visit `https://aistudio.google.com/app/apikey` and create an API key.
+
+    It is highly recommended to use API keys from a **Gemini Sandbox account** for development and testing all trading-related functionalities.
 
 ## Usage
 
