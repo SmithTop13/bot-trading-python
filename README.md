@@ -177,7 +177,7 @@ end
 subgraph External Services
 I[Gemini Exchange API]
 J[Market Data Sources]
-K{News Source APIs<br>(e.g., Bloomberg, Reuters, Google News Search API)}
+K{"News Source APIs<br>(e.g., Bloomberg, Reuters, Google News Search API)"}
 end
 
 subgraph Data & Storage
