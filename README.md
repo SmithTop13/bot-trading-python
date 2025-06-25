@@ -20,7 +20,7 @@ A[Developer / Trader]
 end
 
 subgraph "Core Bot Logic (Python Application)"
-B[Python Script: Main Bot Logic]
+B["Python Script: Main Bot Logic"]
 B --> C{Decision Engine}
 C --> D[Risk Management Module]
 C --> E[Order Management Module]
@@ -35,7 +35,7 @@ end
 subgraph External Services
 I[Gemini Exchange API]
 J[Market Data Sources]
-K{News Source APIs<br>(e.g., Bloomberg, Reuters, Google News Search API)}
+K{"News Source APIs<br>(e.g., Bloomberg, Reuters, Google News Search API)"}
 end
 
 subgraph Data & Storage
@@ -50,12 +50,12 @@ end
 
 A -- Configures & Monitors --> B
 B -- Sends Data & Prompts --> H
-H -- Provides Signals/Analysis<br>(incl. Sentiment) --> C
+H -- "Provides Signals/Analysis<br>(incl. Sentiment)" --> C
 F -- Fetches Real-time/Historical Data --> J
 F -- Fetches Order Book/Ticker --> I
 
 K -- Provides Raw News Articles/Headlines --> H
-H -- Processes & Analyzes News Content<br>(e.g., Sentiment, Summarization) --> C
+H -- Processes & Analyzes News Content<br>"(e.g., Sentiment, Summarization)" --> C
 
 C -- Decides Buy/Sell/Hold --> E
 D -- Applies Rules --> E
