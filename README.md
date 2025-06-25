@@ -55,7 +55,7 @@ F -- Fetches Real-time/Historical Data --> J
 F -- Fetches Order Book/Ticker --> I
 
 K -- Provides Raw News Articles/Headlines --> H
-H -- Processes & Analyzes News Content<br>"(e.g., Sentiment, Summarization)" --> C
+H -- "Processes & Analyzes News Content<br>(e.g., Sentiment, Summarization)" --> C
 
 C -- Decides Buy/Sell/Hold --> E
 D -- Applies Rules --> E
