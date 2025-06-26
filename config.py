@@ -1,5 +1,10 @@
 import os
 
+import dotenv
+
+# Load environment variables from .env file
+dotenv.load_dotenv()
+
 # API Keys - Load from environment variables for security
 BINANCE_API_KEY = os.environ.get('BINANCE_API_KEY')
 BINANCE_API_SECRET = os.environ.get('BINANCE_API_SECRET')

@@ -3,6 +3,8 @@ import signal
 import sys
 import time
 
+from data_collector import fetch_account_balances
+
 # Attempt to import project modules
 try:
     import config
@@ -274,15 +276,15 @@ def main():
                         base_asset_symbol = symbol[:-len(quote_asset_symbol)]
                     else: # Fallback for pairs like ETHBTC
                         # Heuristic: assume last 3 or 4 chars are quote if common like BTC/ETH
-                        if symbol.endswith("BTC") and len(symbol) > 3 :
-                             quote_asset_symbol = "BTC"
-                             base_asset_symbol = symbol[:-3]
+                        if symbol.endswith("BTC") and len(symbol) > 3:
+                            quote_asset_symbol = "BTC"
+                            base_asset_symbol = symbol[:-3]
                         elif symbol.endswith("ETH") and len(symbol) > 3:
-                             quote_asset_symbol = "ETH"
-                             base_asset_symbol = symbol[:-3]
+                            quote_asset_symbol = "ETH"
+                            base_asset_symbol = symbol[:-3]
                         else:
                             logger.error(f"Could not determine base/quote for symbol {symbol}. Skipping trade logic.")
-                            continue # Skip this proposal
+                            return  # Exit the function instead of using 'continue'
 
                     logger.info(f"Determined Base: {base_asset_symbol}, Quote: {quote_asset_symbol} for symbol {symbol}")
 
